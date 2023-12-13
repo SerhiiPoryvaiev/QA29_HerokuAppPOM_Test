@@ -17,4 +17,18 @@ public class HomePage extends BasePage{
         click(linkAlerts);
         return new HomePage(driver);
     }
+
+    @FindBy(css="[href='/windows']")
+    WebElement linkMultipleWindow;
+    public HomePage getMultipleWindows() {
+        click(linkMultipleWindow);
+        return new HomePage(driver);
+    }
+
+    @FindBy(css="[href='/dropdown']")
+    WebElement linkdropdown;
+    public DropPage getDropdown() {
+        click(linkdropdown);
+        return new DropPage(driver);
+    }
 }
